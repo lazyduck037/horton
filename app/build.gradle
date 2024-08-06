@@ -6,13 +6,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 31
-    buildToolsVersion "30.0.2"
+    compileSdk 34
+    namespace = "hr.dtakac.horton"
 
     defaultConfig {
         applicationId "hr.dtakac.horton"
         minSdkVersion 24
-        targetSdkVersion 31
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
     }
@@ -25,11 +25,11 @@ android {
     }
     compileOptions {
         coreLibraryDesugaringEnabled true
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose true
@@ -67,11 +67,11 @@ dependencies {
     implementation "androidx.activity:activity-ktx:$versions.activity_ktx"
 
     // Compose
-    implementation "androidx.compose.ui:ui:$versions.compose"
-    implementation "androidx.activity:activity-compose:$versions.compose_activity"
-    implementation "androidx.compose.material3:material3:$versions.compose_material3"
-    implementation "androidx.compose.animation:animation:$versions.compose"
-    implementation "androidx.compose.ui:ui-tooling:$versions.compose"
+    implementation "androidx.compose.ui:ui:1.6.8"
+    implementation "androidx.activity:activity-compose:1.9.1"
+    implementation "androidx.compose.material3:material3:1.2.1"
+    implementation "androidx.compose.animation:animation:1.6.8"
+    implementation "androidx.compose.ui:ui-tooling:1.6.8"
     implementation "androidx.lifecycle:lifecycle-viewmodel-compose:$versions.lifecycle"
     implementation "io.coil-kt:coil-compose:$versions.coil"
     implementation "com.google.accompanist:accompanist-permissions:$versions.accompanist_permissions"

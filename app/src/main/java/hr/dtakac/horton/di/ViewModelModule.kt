@@ -28,7 +28,7 @@ class ViewModelModule {
     @Provides
     @ViewModelScoped
     fun provideRecognizeSongUseCase(
-        @Named(SHAZAM) songRecognizer: SongRecognizer,
+        @Named(AUDD) songRecognizer: SongRecognizer,
         songSaver: SongSaver
     ): RecognizeSongUseCase {
         return RecognizeSongUseCase(songRecognizer, songSaver)

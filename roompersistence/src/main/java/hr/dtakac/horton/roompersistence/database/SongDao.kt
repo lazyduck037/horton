@@ -8,8 +8,8 @@ import androidx.room.Query
 @Dao
 interface SongDao {
     @Query("SELECT * FROM recognized_songs")
-    suspend fun getAll(): List<RecognizedSongRow>
+   suspend fun getAll(): List<RecognizedSongRow>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun save(recognizedSong: RecognizedSongRow)
+   suspend fun save(recognizedSong: RecognizedSongRow)
 }

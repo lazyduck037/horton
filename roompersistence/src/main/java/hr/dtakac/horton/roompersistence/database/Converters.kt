@@ -7,6 +7,7 @@ import java.time.format.DateTimeFormatter
 
 object Converters {
     @TypeConverter
+    @JvmStatic
     fun fromTimestamp(value: Long?): Instant? {
         return value?.let { epochMilli ->
             Instant.ofEpochMilli(epochMilli)
@@ -14,16 +15,19 @@ object Converters {
     }
 
     @TypeConverter
+    @JvmStatic
     fun instantToTimestamp(value: Instant?): Long? {
         return value?.toEpochMilli()
     }
 
     @TypeConverter
+    @JvmStatic
     fun fromString(value: String?): LocalDate? {
         return value?.let { v -> FORMATTER.parse(v, LocalDate::from) }
     }
 
     @TypeConverter
+    @JvmStatic
     fun localDateToString(value: LocalDate?): String? {
         return value?.let { v -> FORMATTER.format(v) }
     }

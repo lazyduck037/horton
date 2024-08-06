@@ -1,6 +1,6 @@
 package hr.dtakac.horton.auddrecognizer
 
-import hr.dtakac.horton.auddrecognizer.api.AUDD_API_KEY
+//import hr.dtakac.horton.auddrecognizer.api.AUDD_API_KEY
 import hr.dtakac.horton.auddrecognizer.api.AuddApiInterface
 import hr.dtakac.horton.auddrecognizer.mappers.mapToEntity
 import hr.dtakac.horton.domain.recognizer.SongRecognizer
@@ -35,7 +35,7 @@ class AuddSongRecognizer(
         val file = File(songFilePath)
         return MultipartBody.Builder()
             .setType(MultipartBody.FORM)
-            .addFormDataPart("api_token", AUDD_API_KEY)
+            .addFormDataPart("api_token", "fe32aa406048ed418a1ec24588105e40")
             .addFormDataPart(
                 "file",
                 file.name,

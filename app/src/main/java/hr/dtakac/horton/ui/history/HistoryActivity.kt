@@ -22,6 +22,7 @@ class HistoryActivity : ComponentActivity() {
                 Content()
             }
         }
+
     }
 
     @Composable

@@ -20,9 +20,7 @@ fun HistoryScreen(
     onTryAgainClick: () -> Unit
 ) {
     val decayAnimationSpec: DecayAnimationSpec<Float> = rememberSplineBasedDecay()
-    val scrollBehavior = remember {
-        TopAppBarDefaults.exitUntilCollapsedScrollBehavior(decayAnimationSpec = decayAnimationSpec)
-    }
+    val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior(flingAnimationSpec = decayAnimationSpec)
     Scaffold(
         modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {

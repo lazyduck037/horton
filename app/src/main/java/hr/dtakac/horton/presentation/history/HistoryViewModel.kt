@@ -45,6 +45,7 @@ class HistoryViewModel @Inject constructor(
                 HistoryState.Success(groupRecognizedSongsByDay(result))
             }
         }
+        
     }
 
     private suspend fun groupRecognizedSongsByDay(recognizedSongs: List<RecognizedSong>): List<HistoryEntriesByDay> {
