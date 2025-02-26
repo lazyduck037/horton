@@ -10,7 +10,7 @@ buildscript {
                 core_library_desugaring : '1.1.5',
                 kotlin                  : '1.9.24',
                 dagger                  : '2.48',
-                gradle                  : '8.4.2',
+                gradle                  : '8.5.2',
                 activity_ktx            : '1.9.1',
                 compose                 : '1.5.14',
                 coil                    : '1.4.0',
